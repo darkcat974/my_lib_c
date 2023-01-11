@@ -10,7 +10,7 @@ int my_spaceputs(char const *str, int len)
 {
     int i = my_getnbr(str + 1);
 
-    if(str[0] == ' ') {
+    if (str[0] == ' ') {
         for (int y = 0; y < i - len; y++)
             my_putchar(' ');
     }

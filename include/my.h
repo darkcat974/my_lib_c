@@ -14,7 +14,7 @@
     #include <errno.h>
     #include <stdarg.h>
     #include <stddef.h>
-    #define IS_PRINTABLE(c)((((c) < (32)) || ((c) > (126)))? (0): (1))
+    #define IS_PRINTABLE(c)((((c) < (32)) || ((c) > (126))) ? (0) : (1))
 
 typedef int (*fc)(char const *str, va_list *ap);
 int my_printf(const char *format, ...);
