@@ -19,7 +19,7 @@ all:
 clean:
 	make -C lib/my clean
 	rm -rf $(wildcard a-test*)
-
+:
 fclean: clean
 	make -C lib/my fclean
 	rm -rf a.out

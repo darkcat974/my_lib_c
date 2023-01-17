@@ -6,13 +6,6 @@
 ##
 
 SRC	= 	$(wildcard *.c)
-## my_strstr.c
-## my_strcmp.c
-## my_strncmp.c
-## my_str_isupper.c
-## my_str_islower.c
-## my_str_isnum.c
-## my_str_isprintable
 
 IFLAGS	=	-I ../include
 
