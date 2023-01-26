@@ -11,6 +11,7 @@ Test(my_takefile, test_receving_a_file)
 {
     char *str = my_takefile("random.txt");
     cr_assert_str_eq(str, "chats\nchiens");
+    cr_assert_eq(my_strlen(str), 12);
 }
 
 Test(my_takefile, test_receving_nothing)
