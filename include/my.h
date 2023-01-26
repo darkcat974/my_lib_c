@@ -64,4 +64,5 @@ int my_printf(const char *format, ...);
 int my_compute_power_rec(int nb, int p);
 int my_spaceputs(char const *str, int len);
 char *open_file(char const *pathname);
+char *my_takefile(char const *pathname);
 #endif

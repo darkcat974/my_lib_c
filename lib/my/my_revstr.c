@@ -8,7 +8,6 @@
 
 int my_strlen(char *str);
 
-
 char *my_revstr(char *str)
 {
     int len = my_strlen(str);

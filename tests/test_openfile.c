@@ -9,12 +9,12 @@
 
 Test(open_file, test_receving_a_file)
 {
-    char *str = open_file("../random.txt");
-    cr_assert_str_eq(str, "j'aime les chats\nj'aime les chiens");
+    char *str = open_file("random.txt");
+    cr_assert_str_eq(str, "chats\nchiens");
 }
 
 Test(open_file, test_receving_nothing)
 {
     char *str = open_file("");
-    cr_assert_str_empty(str);
+    cr_assert_null(str);
 }
