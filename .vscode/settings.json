@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "my.h": "c",
-        "criterion.h": "c"
+        "criterion.h": "c",
+        "*.tcc": "c",
+        "string": "c",
+        "istream": "c",
+        "streambuf": "c"
     }
 }

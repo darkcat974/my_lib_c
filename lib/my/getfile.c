@@ -9,6 +9,7 @@
 #include <stddef.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 char *open_file(char const *pathname)
 {
@@ -20,5 +21,7 @@ char *open_file(char const *pathname)
     char *buff = malloc(sizeof(char) * st.st_size);
     read(fd, buff, st.st_size);
     close(fd);
+    if (st.st_size == 0)
+        return NULL;
     return buff;
 }
