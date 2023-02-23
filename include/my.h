@@ -35,6 +35,7 @@ int my_isneg(int nb);
 void my_swap(int *a, int *b);
 int my_putstr(char const *str);
 int my_strlen(char const *str);
+int my_strlens(char const *str, char const *end);
 int my_arraylen(char **arr);
 int my_getnbr(char const *str);
 int my_is_prime(int nb);

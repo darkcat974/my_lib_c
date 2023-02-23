@@ -11,6 +11,7 @@ SRC =   tests/test_strstr.c\
 		tests/test_revstr.c\
 		tests/test_openfile.c\
 		tests/test_strcat.c\
+		tests/test_len.c\
 		tests/test_my_str_to_word_array.c
 
 SOME_FLAGS = -lcriterion --coverage -Llib/my -lmy
