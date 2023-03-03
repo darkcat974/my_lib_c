@@ -36,7 +36,6 @@ void my_swap(int *a, int *b);
 int my_putstr(char const *str);
 int my_strlen(char const *str);
 int my_strlens(char const *str, char const *end);
-int my_arraylen(char **arr);
 int my_getnbr(char const *str);
 int my_is_prime(int nb);
 int my_find_prime_sup(int nb);
@@ -69,5 +68,8 @@ char *my_takefile(char *temp);
 void free_all();
 void my_free(void *ptr);
 void *my_malloc(size_t size);
+int count_words(char const *str, char const *sep);
+int is_sep(char const c, char const *sep);
+int my_arraylen(char **arr);
 
 #endif
