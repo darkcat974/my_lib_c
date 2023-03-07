@@ -7,14 +7,10 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include "../../include/my.h"
 
-typedef struct Ptr {
-    void *ptr;
-    size_t nb;
-    struct Ptr* next;
-} ptr_t;
-
-static ptr_t *get_malloc_list() {
+static ptr_t *get_malloc_list(void)
+{
     static ptr_t *ptr_list = NULL;
     if (!ptr_list) {
         ptr_list = malloc(sizeof(ptr_t));
@@ -59,7 +55,7 @@ void my_free(void *ptr)
     }
 }
 
-void free_all()
+void free_all(void)
 {
     ptr_t *list = get_malloc_list();
     while (list->next) {

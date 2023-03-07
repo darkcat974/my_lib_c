@@ -1,3 +1,9 @@
+/*
+** EPITECH PROJECT, 2023
+** my_lib_c
+** File description:
+** main
+*/
 #include "include/my.h"
 #include <stdio.h>
 

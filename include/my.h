@@ -16,6 +16,12 @@
     #include <stddef.h>
     #define IS_PRINTABLE(c)((((c) < (32)) || ((c) > (126))) ? (0) : (1))
 
+typedef struct Ptr {
+    void *ptr;
+    size_t nb;
+    struct Ptr* next;
+} ptr_t;
+
 typedef int (*fc)(char const *str, va_list *ap);
 int my_printf(const char *format, ...);
 int iflag(char const *str, va_list *ap);
@@ -65,7 +71,7 @@ int my_compute_power_rec(int nb, int p);
 int my_spaceputs(char const *str, int len);
 char *open_file(char const *pathname);
 char *my_takefile(char *temp);
-void free_all();
+void free_all(void);
 void my_free(void *ptr);
 void *my_malloc(size_t size);
 int count_words(char const *str, char const *sep);
