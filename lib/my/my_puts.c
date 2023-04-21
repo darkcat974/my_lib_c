@@ -17,6 +17,16 @@ int my_putstr(char const *str)
     return write(1, str, my_strlen(str));
 }
 
+int my_putarray(char **arr)
+{
+    int i = 0;
+    for (int i = 0; arr[i]; i++) {
+        my_putstr(arr[i]);
+        my_putchar('\n');
+    }
+    return i;
+}
+
 int my_putnbr(int nb)
 {
     int p = 1;
@@ -36,34 +46,4 @@ int my_putnbr(int nb)
         nb %= p;
     }
     return i;
-}
-
-int my_putnbr_base(int nb, char const *base)
-{
-    int i = 0;
-    int e = my_strlen(base);
-    int tmp;
-
-    while ((nb / e) > my_strlen(base) - 1)
-        e *= my_strlen(base);
-    while (e >= 1) {
-        tmp = nb / e;
-        my_putchar(base[tmp]);
-        nb %= e;
-        e /= my_strlen(base);
-        i++;
-    }
-    return i;
-}
-
-int my_put_float(double nbr, int acc)
-{
-    int e = my_compute_power_rec(10, acc);
-    int a = nbr;
-    int b = (nbr * e) - (a * e);
-    int c = 0;
-    c = my_putnbr(a);
-    c += my_putchar('.');
-    c += my_putnbr(b);
-    return c;
 }

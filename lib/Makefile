@@ -1,29 +1,27 @@
 ##
-## EPITECH PROJECT, 2022
-## rush2
+## EPITECH PROJECT, 2023
+## B-PSU-200-RUN-2-1-minishell1-florian.dajon
 ## File description:
 ## Makefile
 ##
 
-SRC	= 	$(wildcard *.c)
+SRC = $(wildcard my/*.c)
 
 IFLAGS	=	-I ../include
 
 CFLAGS = -W -Wall -Werror -Wextra $(IFLAGS)
 
-OBJ	=	$(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
-NAME	=	libmy.a
+NAME = libmy.a
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all: $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
 clean:
-	rm -f $(OBJ)
+	rm -rf $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all

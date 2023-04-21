@@ -10,7 +10,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "../../include/my.h"
 
 char *open_file(char const *pathname)
 {
@@ -19,7 +18,7 @@ char *open_file(char const *pathname)
         return NULL;
     struct stat st;
     stat(pathname, &st);
-    char *buff = my_malloc(sizeof(char) * st.st_size);
+    char *buff = malloc(sizeof(char) * st.st_size);
     read(fd, buff, st.st_size);
     close(fd);
     if (st.st_size == 0)
