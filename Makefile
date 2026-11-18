@@ -6,7 +6,7 @@
 ##
 
 SRC =   tests/test_strstr.c\
-		tests/test_strcmp.c\
+		tests/test_my_strcmp.c\
 		tests/test_my_puts.c\
 		tests/test_revstr.c\
 		tests/test_openfile.c\

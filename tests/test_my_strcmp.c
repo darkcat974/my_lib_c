@@ -1,20 +1,14 @@
-/*
-** EPITECH PROJECT, 2022
-** unitest
-** File description:
-** test_strcmp
-*/
 #include <criterion/criterion.h>
 #include "../include/my.h"
 
 Test(my_strncmp, testing_n_cmp_s1_greater)
 {
-    cr_assert_eq(my_strncmp("j'aime les chats", "j'aime", 17), 1);
+    cr_assert_gt(my_strncmp("j'aime les chats", "j'aime", 17), 0);
 }
 
 Test(my_strncmp, testing_n_cmp_s2_greater)
 {
-    cr_assert_eq(my_strncmp("j'aime", "j'aime les chats", 17), -1);
+    cr_assert_lt(my_strncmp("j'aime", "j'aime les chats", 17), 0);
 }
 
 Test(my_strncmp, testing_n_cmp_no_arg)
@@ -22,14 +16,14 @@ Test(my_strncmp, testing_n_cmp_no_arg)
     cr_assert_eq(my_strncmp(NULL, NULL, 0), 0);
 }
 
-Test(strcmp, testing_cmp_s1_greater)
+Test(my_strcmp, testing_cmp_s1_greater)
 {
-    cr_assert_eq(my_strcmp("j'aime les chats", "j'aime"), 1);
+    cr_assert_gt(my_strcmp("j'aime les chats", "j'aime"), 0);
 }
 
 Test(my_strcmp, testing_cmp_s2_greater)
 {
-    cr_assert_eq(my_strcmp("j'aime", "j'aime les chats"), -1);
+    cr_assert_lt(my_strcmp("j'aime", "j'aime les chats"), 0);
 }
 
 Test(my_strcmp, testing_cmp_no_arg)

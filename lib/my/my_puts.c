@@ -29,21 +29,14 @@ int my_putarray(char **arr)
 
 int my_putnbr(int nb)
 {
-    int p = 1;
-    int i = 0;
+    long n = nb;
 
-    if (nb < 0) {
-        nb *= -1;
+    if (n < 0) {
         my_putchar('-');
+        n = -n;
     }
-    if (nb > 2147483647) {
-        write(1, "0", 1);
-        return 0;
-    }
-    for (; (nb / p) > 9; p *= 10);
-    for (; p >= 1; p /= 10, i++) {
-        my_putchar((nb / p) + 48);
-        nb %= p;
-    }
-    return i;
+    if (n >= 10)
+        my_putnbr(n / 10);
+    my_putchar((n % 10) + '0');
+    return 0;
 }

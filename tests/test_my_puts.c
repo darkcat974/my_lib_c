@@ -25,3 +25,27 @@ Test(my_putnbr, print_int, .init=redirect_all_stdout)
     my_putnbr(974);
     cr_assert_stdout_eq_str("974");
 }
+
+Test(my_putnbr, print_neg_int, .init=redirect_all_stdout)
+{
+    my_putnbr(-974);
+    cr_assert_stdout_eq_str("-974");
+}
+
+Test(my_putnbr, print_zero, .init=redirect_all_stdout)
+{
+    my_putnbr(0);
+    cr_assert_stdout_eq_str("0");
+}
+
+Test(my_putnbr, print_min_int, .init=redirect_all_stdout)
+{
+    my_putnbr(-2147483648);
+    cr_assert_stdout_eq_str("-2147483648");
+}
+
+Test(my_putnbr, print_max_int, .init=redirect_all_stdout)
+{
+    my_putnbr(2147483647);
+    cr_assert_stdout_eq_str("2147483647");
+}

@@ -9,12 +9,14 @@
 
 Test(my_revstr, test_revstr_basic_word)
 {
-    char *rev = my_revstr("chat");
+    char str[] = "chat";
+    char *rev = my_revstr(str);
     cr_assert_str_eq(rev, "tahc");
 }
 
 Test(my_revstr, test_revstr_empty_str)
 {
-    char *rev = my_revstr("");
+    char str[] = "";
+    char *rev = my_revstr(str);
     cr_assert_str_empty(rev);
 }
